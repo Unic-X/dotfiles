@@ -1,26 +1,28 @@
 {
     "height": 30, // Waybar height (to be removed for auto height)
-    "layer": "top", // Waybar at top layer
+    "layer": "bottom", // Waybar at top layer
     "margin-top": 6,
     "margin-left": 5,
     "margin-bottom": 0,
     "margin-right": 5,
-    "spacing": 3, // Gaps between modules (4px)
+    "spacing": 3, 
     "modules-left": ["custom/launcher", "cpu", "memory", "hyprland/workspaces", "clock"],
     "modules-center": ["custom/spotify",],
     "modules-right": ["custom/power_profile", "backlight", "pulseaudio", "network","bluetooth", "battery", "tray", "custom/power-menu"],
     "hyprland/workspaces": {
-      "format": "{icon}",
-      "on-click": "activate",
-      "format-icons": {
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "urgent": "",
-        "active": "",
-        "default": ""
-      }
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click" : "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "<span color=\"#D8DEE9\"></span>",
+            "2": "<span color=\"#88C0D0\"></span>",
+            "3": "<span color=\"#A3BE8C\"></span>",
+            "4": "<span color=\"#D8DEE9\"></span>",
+            "urgent": "",
+            "focused":  "",
+            "default":  "",
+        }
     },
     "hyprland/window": {
         "format": "{}"
@@ -61,7 +63,7 @@
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}  {volume}%",
         "format-bluetooth": "  {volume}%",
         "format-bluetooth-muted": " ",
         "format-muted": "婢",
@@ -111,7 +113,7 @@
         //shows the current power profile and switches to next on click
         "exec": "asusctl profile -p | sed s:'Active profile is'::",
         "interval": 30,
-        "format": "󰈐 {}", 
+        "format": "󰈐 Change Mode", 
         "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
         "signal": 8
     },

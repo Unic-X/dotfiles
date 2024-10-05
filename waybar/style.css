@@ -1,7 +1,7 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: JetBrainsMono Nerd Font;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 window#waybar {
@@ -88,6 +88,7 @@ window#waybar.hidden {
 #window,
 #workspaces {
   margin: 0 4px;
+  padding-right: 5px;
   border-radius: 7.8px;
   background-color: #1f2530;
 }
