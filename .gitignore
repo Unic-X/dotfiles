@@ -5,3 +5,6 @@
 # But not these files...
 !hypr/
 !waybar/
+!mako/
+!lvim/
+!nvim/
